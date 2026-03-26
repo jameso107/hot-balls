@@ -338,6 +338,85 @@ h2 {
   padding: 1.5rem;
 }
 
+.photoCarouselSection {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(7, 27, 17, 0.72);
+  padding: 1.2rem;
+}
+
+.photoCarouselHeader p {
+  margin: 0.55rem 0 0.85rem;
+  color: var(--muted);
+}
+
+.photoCarouselFrame {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #0b2115;
+}
+
+.photoSlide {
+  width: 20%;
+  margin: 0 auto;
+  padding: 0.7rem 0;
+}
+
+.photoSlide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carouselArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  border: 1px solid #3f7d58;
+  background: rgba(5, 16, 10, 0.72);
+  color: #f1ffef;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carouselArrow:hover {
+  background: rgba(8, 29, 18, 0.9);
+}
+
+.carouselArrowLeft {
+  left: 0.65rem;
+}
+
+.carouselArrowRight {
+  right: 0.65rem;
+}
+
+.carouselDots {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.45rem;
+  justify-content: center;
+}
+
+.carouselDot {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 999px;
+  border: 0;
+  background: #4a7f61;
+  cursor: pointer;
+}
+
+.carouselDotActive {
+  background: var(--accent);
+}
+
 .sectionDark {
   background: linear-gradient(180deg, rgba(25, 68, 44, 0.58), rgba(8, 24, 16, 0.94));
 }
@@ -473,6 +552,15 @@ h2 {
 }
 
 @media (max-width: 700px) {
+  .photoSlide {
+    width: 32%;
+  }
+
+  .carouselArrow {
+    width: 2rem;
+    height: 2rem;
+  }
+
   .siteToolbar {
     align-items: flex-start;
     flex-direction: column;

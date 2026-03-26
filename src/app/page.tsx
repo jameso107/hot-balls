@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ETSY_TRACKED_URL } from "../lib/site";
 import IntroTransition from "../components/IntroTransition";
+import PhotoCarousel from "../components/PhotoCarousel";
 
 const researchLinks = [
   "https://mygolfspy.com/labs/hot-versus-cold-golf-balls/",
@@ -143,6 +144,8 @@ export default function Home() {
             <EtsyButton label="Shop Hot Balls on Etsy" />
           </div>
         </section>
+
+        <PhotoCarousel />
 
         <section className="section sectionDark" id="performance">
           <h2>Why Hot Balls Perform Better</h2>
