@@ -8,7 +8,7 @@ type IntroTransitionProps = {
 
 const ROLL_DURATION_MS = 3000;
 const DROP_DURATION_MS = 320;
-const SLIDE_DURATION_MS = 1400;
+const SLIDE_DURATION_MS = 3000;
 
 export default function IntroTransition({ children }: IntroTransitionProps) {
   const [isSliding, setIsSliding] = useState(false);

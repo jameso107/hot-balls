@@ -103,25 +103,17 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <IntroTransition>
-        <header className="hero" id="top">
-          <nav className="topNav">
+        <div className="siteToolbar" id="top">
+          <a className="brandLogo" href="#top" aria-label="Hot Balls home">
+            <span className="brandLogoTitle">Hot Balls</span>
+            <span className="brandLogoSub">Golf Ball Warmer Sack</span>
+          </a>
+          <nav className="toolbarNav" aria-label="Primary">
             <a href="#how-it-works">How It Works</a>
             <a href="#performance">Performance</a>
             <a href="#faq">FAQ</a>
           </nav>
-          <p className="eyebrow">Winter Golf Performance Accessory</p>
-          <h1>Hot Balls Golf Ball Warmer Sack</h1>
-          <p className="heroText">
-            Keep your golf balls hot enough to protect distance, launch, and feel
-            when cold weather rounds try to steal your yards.
-          </p>
-          <div className="ctaRow">
-            <EtsyButton label="View Price on Etsy" />
-            <a className="textLink" href="#included">
-              See What&apos;s Included
-            </a>
-          </div>
-        </header>
+        </div>
 
         <section className="section" id="how-it-works">
           <h2>How Hot Balls Works</h2>
@@ -154,6 +146,7 @@ export default function Home() {
 
         <section className="section sectionDark" id="performance">
           <h2>Why Hot Balls Perform Better</h2>
+          <p className="inventorTagline">Invented by Richard TerHaar.</p>
           <ul className="proofList">
             <li>Hot balls are proven to go substantially further than cold balls.</li>
             <li>
@@ -209,10 +202,7 @@ export default function Home() {
           <p>Upgrade your winter golf setup with Hot Balls today.</p>
           <EtsyButton label="Buy Hot Balls on Etsy" />
         </section>
-
-        <div className="stickyCta">
-          <EtsyButton label="Shop Hot Balls" />
-        </div>
+        <footer className="siteFooter">Copyright Hot Balls 2026</footer>
       </IntroTransition>
     </main>
   );

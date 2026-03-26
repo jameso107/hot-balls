@@ -206,20 +206,60 @@ main {
   padding: 1.25rem 1rem 6rem;
 }
 
-.topNav {
+.siteToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  margin-bottom: 1rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(6, 20, 13, 0.78);
+  backdrop-filter: blur(8px);
+}
+
+.brandLogo {
+  text-decoration: none;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.08rem;
+}
+
+.brandLogoTitle {
+  font-family: Oxanium, Inter, sans-serif;
+  font-size: clamp(1.25rem, 2.6vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #ffe07a;
+  text-shadow: 0 0 14px rgba(255, 212, 71, 0.24);
+  line-height: 1;
+}
+
+.brandLogoSub {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #d6f0e0;
+  line-height: 1.1;
+}
+
+.toolbarNav {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   font-size: 0.95rem;
-  margin-bottom: 1rem;
 }
 
-.topNav a {
+.toolbarNav a {
   color: var(--muted);
   text-decoration: none;
 }
 
-.topNav a:hover {
+.toolbarNav a:hover {
   color: var(--text);
 }
 
@@ -334,6 +374,12 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+.inventorTagline {
+  margin-top: 0.75rem;
+  color: #ffe07a;
+  font-weight: 600;
+}
+
 .note {
   font-size: 0.95rem;
 }
@@ -344,6 +390,7 @@ h2 {
 
 .sectionCta {
   margin-top: 1rem;
+  text-align: center;
 }
 
 .includedPanel {
@@ -386,39 +433,37 @@ h2 {
   color: #f7edce;
 }
 
-.stickyCta {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(5, 14, 9, 0.95);
-  border-top: 1px solid var(--line);
-  padding: 0.65rem 1rem calc(0.65rem + env(safe-area-inset-bottom));
-  display: flex;
-  justify-content: center;
-  backdrop-filter: blur(6px);
+.finalCta .ctaButton {
+  margin-inline: auto;
 }
 
-.stickyCta .ctaButton {
-  width: min(420px, 100%);
+.siteFooter {
+  margin: 1rem 0 0.4rem;
+  text-align: center;
+  color: #c9dfd0;
+  font-size: 0.86rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 @media (min-width: 900px) {
   main {
     padding-bottom: 2rem;
   }
-
-  .stickyCta {
-    position: static;
-    border: 0;
-    background: transparent;
-    padding: 0;
-    margin-top: 1rem;
-    backdrop-filter: none;
-  }
 }
 
 @media (max-width: 700px) {
+  .siteToolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .toolbarNav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .introScene {
     --hole-x: 69%;
     --hole-y: calc(28vh - 12px);
