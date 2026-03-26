@@ -1,0 +1,29 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fairway" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#19492f" />
+      <stop offset="100%" stop-color="#081b12" />
+    </linearGradient>
+    <radialGradient id="spot" cx="0.2" cy="0.2" r="0.6">
+      <stop offset="0%" stop-color="#2f7b4f" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#2f7b4f" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#fairway)" />
+  <rect width="1200" height="630" fill="url(#spot)" />
+  <circle cx="930" cy="210" r="145" fill="#f7f7f2" />
+  <g fill="#d5d5cf">
+    <circle cx="860" cy="170" r="5" />
+    <circle cx="905" cy="130" r="5" />
+    <circle cx="955" cy="120" r="5" />
+    <circle cx="1005" cy="145" r="5" />
+    <circle cx="1025" cy="200" r="5" />
+    <circle cx="985" cy="250" r="5" />
+    <circle cx="935" cy="275" r="5" />
+    <circle cx="885" cy="250" r="5" />
+    <circle cx="850" cy="215" r="5" />
+  </g>
+  <text x="96" y="265" fill="#ffd54c" font-size="96" font-family="Arial, sans-serif" font-weight="700">HOT BALLS</text>
+  <text x="96" y="340" fill="#f1f7f3" font-size="44" font-family="Arial, sans-serif">Golf Ball Warmer Sack</text>
+  <text x="96" y="400" fill="#bdd6c7" font-size="34" font-family="Arial, sans-serif">Keep distance through cold-weather rounds</text>
+</svg>
