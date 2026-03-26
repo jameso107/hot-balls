@@ -46,7 +46,6 @@ export default function PhotoCarousel() {
     <section className="photoCarouselSection" aria-label="Product photo carousel">
       <div className="photoCarouselHeader">
         <h2>On-Course Look</h2>
-        <p>Auto-scrolling photos. Hover to pause, or use arrows anytime.</p>
       </div>
 
       <div
