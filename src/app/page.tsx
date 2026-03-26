@@ -202,7 +202,19 @@ export default function Home() {
           <p>Upgrade your winter golf setup with Hot Balls today.</p>
           <EtsyButton label="Buy Hot Balls on Etsy" />
         </section>
-        <footer className="siteFooter">Copyright Hot Balls 2026</footer>
+
+        <section className="specialRequestBox" id="contact">
+          <h2>Special Requests</h2>
+          <p>
+            Need a custom request, bulk order, or gift-specific detail? Reach out
+            directly and we&apos;ll help.
+          </p>
+          <a className="ctaButton" href="mailto:Kristy@KristyTerHaar.com">
+            Contact Us
+          </a>
+        </section>
+
+        <footer className="siteFooter">© 2026 Hot Balls</footer>
       </IntroTransition>
     </main>
   );

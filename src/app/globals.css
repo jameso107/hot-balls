@@ -427,6 +427,7 @@ h2 {
   border-radius: 16px;
   background: linear-gradient(160deg, #3f2f0c, #181203);
   padding: 1.5rem;
+  text-align: center;
 }
 
 .finalCta p {
@@ -434,6 +435,25 @@ h2 {
 }
 
 .finalCta .ctaButton {
+  margin-inline: auto;
+}
+
+.specialRequestBox {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(11, 35, 23, 0.88);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.specialRequestBox p {
+  color: var(--muted);
+  margin: 0.7rem auto 1rem;
+  max-width: 58ch;
+}
+
+.specialRequestBox .ctaButton {
   margin-inline: auto;
 }
 
