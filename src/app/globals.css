@@ -573,21 +573,40 @@ h2 {
 }
 
 @media (max-width: 700px) {
+  .photoCarouselSection {
+    padding: 1rem 0.7rem;
+  }
+
   .photoCarouselFrame {
-    padding: 0.65rem 2.2rem;
+    padding: 0.65rem 0.45rem;
+  }
+
+  .photoCarouselTrack {
+    gap: 0.35rem;
   }
 
   .photoSlide {
-    max-width: 110px;
+    max-width: min(30vw, 132px);
   }
 
   .photoSlideCenter {
-    max-width: 138px;
+    max-width: min(38vw, 168px);
+    transform: scale(1.08);
   }
 
   .carouselArrow {
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    top: 53%;
+    opacity: 0.9;
+  }
+
+  .carouselArrowLeft {
+    left: 0.15rem;
+  }
+
+  .carouselArrowRight {
+    right: 0.15rem;
   }
 
   .siteToolbar {
