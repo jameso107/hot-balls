@@ -3,7 +3,12 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const slides = [
+type Slide = {
+  src: string;
+  alt: string;
+};
+
+const slides: Slide[] = [
   {
     src: "/il_1588xN.5749747626_bqt9.jpg",
     alt: "Hot Balls insulated warming sack with golf ball setup"
@@ -15,12 +20,23 @@ const slides = [
   {
     src: "/il_1588xN.5797825449_9q76.jpg",
     alt: "Hot Balls product detail and included accessories"
+  },
+  {
+    src: "/Gemini_Generated_Image_urnqvvurnqvvurnq.png",
+    alt: "Hot Balls branded creative golf product image"
   }
 ];
+
+function getVisibleSlides(current: number): Slide[] {
+  const prevIndex = (current - 1 + slides.length) % slides.length;
+  const nextIndex = (current + 1) % slides.length;
+  return [slides[prevIndex], slides[current], slides[nextIndex]];
+}
 
 export default function PhotoCarousel() {
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const visibleSlides = getVisibleSlides(current);
 
   useEffect(() => {
     if (isPaused) {
@@ -64,14 +80,24 @@ export default function PhotoCarousel() {
           &#10094;
         </button>
 
-        <div className="photoSlide" key={slides[current].src}>
-          <Image
-            src={slides[current].src}
-            alt={slides[current].alt}
-            width={1588}
-            height={1588}
-            priority={current === 0}
-          />
+        <div className="photoCarouselTrack">
+          {visibleSlides.map((slide, index) => {
+            const isCenter = index === 1;
+            return (
+              <div
+                className={`photoSlide${isCenter ? " photoSlideCenter" : ""}`}
+                key={`${slide.src}-${index}`}
+              >
+                <Image
+                  src={slide.src}
+                  alt={slide.alt}
+                  width={1588}
+                  height={1588}
+                  priority={slide.src === slides[0].src}
+                />
+              </div>
+            );
+          })}
         </div>
 
         <button

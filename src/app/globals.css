@@ -357,17 +357,38 @@ h2 {
   overflow: hidden;
   border: 1px solid var(--line);
   background: #0b2115;
+  padding: 0.8rem 2.6rem;
+}
+
+.photoCarouselTrack {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  align-items: center;
 }
 
 .photoSlide {
-  width: 20%;
+  width: 100%;
+  max-width: 188px;
   margin: 0 auto;
-  padding: 0.7rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0.72;
+  transform: scale(0.92);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.photoSlideCenter {
+  max-width: 235px;
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.32);
 }
 
 .photoSlide img {
   width: 100%;
   height: auto;
+  object-fit: contain;
   display: block;
 }
 
@@ -552,8 +573,16 @@ h2 {
 }
 
 @media (max-width: 700px) {
+  .photoCarouselFrame {
+    padding: 0.65rem 2.2rem;
+  }
+
   .photoSlide {
-    width: 32%;
+    max-width: 110px;
+  }
+
+  .photoSlideCenter {
+    max-width: 138px;
   }
 
   .carouselArrow {
